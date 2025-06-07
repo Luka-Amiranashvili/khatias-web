@@ -2,14 +2,25 @@
 
 import { useSearchParams } from "next/navigation";
 import { useLanguage } from "../../context/LanguageContext";
+import { useEffect, useState } from "react";
 
 export default function ThankYouClient() {
   const searchParams = useSearchParams();
-  const type = searchParams.get("type");
   const { t } = useLanguage();
+  const [message, setMessage] = useState(null);
 
-  const message =
-    type === "donation" ? t.thankYouMessageDonation : t.thankYouMessageContact;
+  useEffect(() => {
+    const type = searchParams.get("type");
+
+    const msg =
+      type === "donation"
+        ? t.thankYouMessageDonation
+        : t.thankYouMessageContact;
+
+    setMessage(msg);
+  }, [searchParams, t]);
+
+  if (!message) return null;
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
