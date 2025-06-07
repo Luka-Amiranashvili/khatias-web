@@ -1,9 +1,8 @@
-"use client";
+export const dynamic = "force-dynamic";
+("use client");
 
 import { useSearchParams } from "next/navigation";
 import { useLanguage } from "../../context/LanguageContext";
-
-export const dynamic = "force-dynamic";
 
 const ThankYouPage = () => {
   const searchParams = useSearchParams();
