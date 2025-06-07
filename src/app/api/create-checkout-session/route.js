@@ -1,3 +1,5 @@
+"use server";
+
 import Stripe from "stripe";
 import { Redis } from "@upstash/redis";
 import { Ratelimit } from "@upstash/ratelimit";
