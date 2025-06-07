@@ -59,7 +59,7 @@ const HomePage = () => {
           <div className="relative w-full h-[400px] flex-shrink-0 overflow-hidden rounded-2xl">
             <Image
               fill
-              src="/pic1.png"
+              src="/slideImg/pic1.png"
               className="object-cover rounded-2xl"
               alt="Slide 1"
             />
@@ -67,7 +67,7 @@ const HomePage = () => {
           <div className="relative w-full h-[400px] flex-shrink-0 overflow-hidden rounded-2xl">
             <Image
               fill
-              src="/pic2.png"
+              src="/slideImg/pic2.png"
               className="object-cover rounded-2xl"
               alt="Slide 2"
             />
@@ -75,7 +75,7 @@ const HomePage = () => {
           <div className="relative w-full h-[400px] flex-shrink-0 overflow-hidden rounded-2xl">
             <Image
               fill
-              src="/pic3.png"
+              src="/slideImg/pic3.png"
               className="object-cover rounded-2xl"
               alt="Slide 3"
             />
@@ -83,7 +83,7 @@ const HomePage = () => {
           <div className="relative w-full h-[400px] flex-shrink-0 overflow-hidden rounded-2xl">
             <Image
               fill
-              src="/pic1.png"
+              src="/slideImg/pic4.png"
               className="object-cover rounded-2xl"
               alt="Slide 4"
             />
