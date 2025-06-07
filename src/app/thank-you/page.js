@@ -3,6 +3,8 @@
 import { useSearchParams } from "next/navigation";
 import { useLanguage } from "../../context/LanguageContext";
 
+export const dynamic = "force-dynamic";
+
 const ThankYouPage = () => {
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
