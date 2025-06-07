@@ -1,4 +1,6 @@
-"use server";
+import Stripe from "stripe";
+import { Redis } from "@upstash/redis";
+import { Ratelimit } from "@upstash/ratelimit";
 
 export async function POST(req) {
   if (!process.env.STRIPE_SECRET_KEY) {
@@ -8,6 +10,7 @@ export async function POST(req) {
       { status: 500 }
     );
   }
+
   if (
     !process.env.UPSTASH_REDIS_REST_URL ||
     !process.env.UPSTASH_REDIS_REST_TOKEN
@@ -21,12 +24,6 @@ export async function POST(req) {
 
   try {
     console.log("🔁 Received POST request");
-
-    const Stripe = (await import("stripe")).default;
-    const { Redis } = await import("@upstash/redis");
-    const { Ratelimit } = await import("@upstash/ratelimit");
-
-    console.log("✅ Modules imported");
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
     const redis = new Redis({
@@ -62,7 +59,7 @@ export async function POST(req) {
       });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
