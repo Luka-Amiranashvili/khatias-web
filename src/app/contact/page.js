@@ -4,6 +4,7 @@ import { useLanguage } from "../../context/LanguageContext";
 
 const ContactPage = () => {
   const { t } = useLanguage();
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
   const handleSubmit = (e) => {
     const form = e.target;
@@ -18,11 +19,7 @@ const ContactPage = () => {
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="_captcha" value="false" />
-      <input
-        type="hidden"
-        name="_next"
-        value="http://localhost:3000/thank-you"
-      />
+      <input type="hidden" name="_next" value={`${baseUrl}/`} />
 
       <p className="text-lg text-blue-600 font-medium pb-2">
         {t.contactPageTitle}
