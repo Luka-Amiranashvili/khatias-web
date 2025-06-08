@@ -20,9 +20,7 @@ const Footer = () => {
     {
       title: t.followUs,
       links: [
-        { name: "Instagram", href: "https://www.instagram.com" },
-        { name: "Facebook", href: "https://www.facebook.com" },
-        { name: "YouTube", href: "https://www.youtube.com" },
+        { name: "Facebook", href: "https://www.facebook.com/stichtingimedi" },
       ],
     },
   ];
