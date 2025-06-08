@@ -83,7 +83,7 @@ export async function POST(req) {
         },
       ],
       mode: "payment",
-      success_url: `${baseUrl}/thank-you?type=donation`,
+      success_url: `${baseUrl}/`,
       cancel_url: `${baseUrl}/donate`,
     });
 

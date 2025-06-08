@@ -40,11 +40,6 @@ export const translations = {
     donatePageInputPlaceholder: "Enter amount in EUR",
     donatePageSubmitButton: "Donate",
 
-    thankYouMessageDonation: "Thank you for your generous donation!🙏",
-    thankYouMessageContact:
-      "Thank you for your message! We will get back to you shortly 🍕",
-    thankYouDescription:
-      "We appreciate your action. If you have any further questions, feel free to contact us again.",
     notFoundTitle: "404",
     notFoundMessage: "Page Not Found",
     notFoundDescription:
@@ -92,11 +87,6 @@ export const translations = {
     donatePageInputPlaceholder: "Voer bedrag in EUR in",
     donatePageSubmitButton: "Doneren",
 
-    thankYouMessageDonation: "Dank je wel voor je genereuze donatie!",
-    thankYouMessageContact:
-      "Dank je wel voor je bericht! We nemen zo snel mogelijk contact met je op 🍕",
-    thankYouDescription:
-      "We waarderen je actie. Als je nog verdere vragen hebt, neem dan gerust contact met ons op.",
     notFoundTitle: "404",
     notFoundMessage: "Pagina Niet Gevonden",
     notFoundDescription:
