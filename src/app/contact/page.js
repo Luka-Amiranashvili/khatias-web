@@ -13,7 +13,7 @@ const ContactPage = () => {
 
   return (
     <form
-      action="https://formsubmit.co/giokoch@hotmail.com"
+      action="https://formsubmit.co/giokoch%40hotmail.com"
       method="POST"
       className="flex flex-col items-center text-sm mt-12 mb-12"
       onSubmit={handleSubmit}
