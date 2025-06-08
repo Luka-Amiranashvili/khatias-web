@@ -1,7 +1,8 @@
 export const dynamic = "force-dynamic";
 
-import ThankYouClient from "./ThankYouClient";
-
 export default function ThankYouPage() {
+  if (typeof window === "undefined") return null;
+
+  const ThankYouClient = require("./ThankYouClient").default;
   return <ThankYouClient />;
 }
