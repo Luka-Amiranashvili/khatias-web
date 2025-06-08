@@ -1,8 +1,16 @@
+import { Suspense } from "react";
+import dynamicImport from "next/dynamic";
+
 export const dynamic = "force-dynamic";
 
-export default function ThankYouPage() {
-  if (typeof window === "undefined") return null;
+const ThankYouClient = dynamicImport(() => import("./ThankYouClient"), {
+  ssr: false,
+});
 
-  const ThankYouClient = require("./ThankYouClient").default;
-  return <ThankYouClient />;
+export default function ThankYouPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ThankYouClient />
+    </Suspense>
+  );
 }
